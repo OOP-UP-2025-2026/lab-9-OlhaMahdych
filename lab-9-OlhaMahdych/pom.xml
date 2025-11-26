@@ -5,23 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ua.opnu</groupId>
-    <artifactId>lab-9-OlhaMahdych</artifactId>
+    <artifactId>app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <dependencies>
-        <!-- JUnit 5 -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.9.0</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -37,12 +24,12 @@
     </dependencies>
 
     <build>
-        <!-- Вказуємо правильні шляхи до вихідних файлів -->
-        <sourceDirectory>app/src/main/java</sourceDirectory>
-        <testSourceDirectory>app/src/test/java</testSourceDirectory>
-
         <plugins>
-            <!-- Плагін для компіляції -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M7</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -52,13 +39,13 @@
                     <target>17</target>
                 </configuration>
             </plugin>
-
-            <!-- Плагін для запуску тестів -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M7</version>
-            </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
 </project>
