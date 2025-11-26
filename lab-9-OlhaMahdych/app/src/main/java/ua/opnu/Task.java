@@ -1,4 +1,4 @@
-package ua.opnu;
+package java.ua.opnu;
 
 import java.util.*;
 
