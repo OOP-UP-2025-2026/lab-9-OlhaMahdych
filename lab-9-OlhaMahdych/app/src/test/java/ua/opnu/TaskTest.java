@@ -1,4 +1,4 @@
-package java.ua.opnu;
+package ua.opnu;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
