@@ -143,3 +143,7 @@ jobs:
             target/site/pmd.html
             target/spotbugsXml.xml
           if-no-files-found: warn
+
+- name: Build with Maven
+  run: mvn clean install
+  working-directory: .
